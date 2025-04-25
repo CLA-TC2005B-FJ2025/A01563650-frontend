@@ -18,8 +18,8 @@ function App() {
           <Route path="/menu" element={<PrivateRoute><MenuPage /></PrivateRoute>} />
           <Route path="/listapersonajes" element={<ListaPersonajes />} />
           <Route path="/crearpersonaje" element={<CrearPersonaje />} />
-          <Route path="/actualizarpersonaje" element={<PrivateRoute><ActualizarPersonaje /></PrivateRoute>} />
-          <Route path="/eliminarpersonaje" element={<PrivateRoute><EliminarPersonaje /></PrivateRoute>} />
+          <Route path="/actualizarpersonaje" element={<ActualizarPersonaje />} />
+          <Route path="/eliminarpersonaje" element={<EliminarPersonaje />} />
           <Route path="/" element={<Navigate to="/login" />} />
         </Routes>
       </AuthProvider>
