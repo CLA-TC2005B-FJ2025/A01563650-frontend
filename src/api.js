@@ -1,4 +1,4 @@
-const apiBaseUrl = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000'; // Asegúrate de tener REACT_APP_API_BASE_URL en tu .env
+const apiBaseUrl = process.env.REACT_APP_API_BASE_URL || 'https://organic-fortnight-pjjwj9r9r97w369r7-5000.app.github.dev'; // Asegúrate de tener REACT_APP_API_BASE_URL en tu .env
 
 const handleResponse = async (response) => {
     if (!response.ok) {
@@ -9,17 +9,17 @@ const handleResponse = async (response) => {
 };
 
 export const getAllPersonajes = async () => {
-    const response = await fetch(`${apiBaseUrl}/personajes`);
+    const response = await fetch('https://organic-fortnight-pjjwj9r9r97w369r7-5000.app.github.dev/personajes');
     return handleResponse(response);
 };
 
 export const getPersonajeById = async (id) => {
-    const response = await fetch(`${apiBaseUrl}/personajes/${id}`);
+    const response = await fetch(`https://organic-fortnight-pjjwj9r9r97w369r7-5000.app.github.dev/personajes/${id}`);
     return handleResponse(response);
 };
 
 export const createPersonaje = async (personaje) => {
-    const response = await fetch(`${apiBaseUrl}/personajes`, {
+    const response = await fetch('https://organic-fortnight-pjjwj9r9r97w369r7-5000.app.github.dev/personajes', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ export const createPersonaje = async (personaje) => {
 };
 
 export const updatePersonaje = async (id, personaje) => {
-    const response = await fetch(`${apiBaseUrl}/personajes/${id}`, {
+    const response = await fetch(`https://organic-fortnight-pjjwj9r9r97w369r7-5000.app.github.dev/personajes/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ export const updatePersonaje = async (id, personaje) => {
 };
 
 export const deletePersonaje = async (id) => {
-    const response = await fetch(`${apiBaseUrl}/personajes/${id}`, {
+    const response = await fetch(`https://organic-fortnight-pjjwj9r9r97w369r7-5000.app.github.dev/personajes/${id}`, {
         method: 'DELETE',
     });
     if (!response.ok) {
